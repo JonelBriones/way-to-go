@@ -6,8 +6,9 @@ import { usePathname } from "next/navigation";
 const View = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
   return (
-    <div className="flex flex-col h-full justify-between ">
-      <div className="flex flex-col h-full relative p-4">{children}</div>
+    <div className="flex flex-col h-full p-4 justify-between">
+      {children}
+
       {pathname !== "/welcome" && <Navbar />}
     </div>
   );

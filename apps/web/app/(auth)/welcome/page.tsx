@@ -38,10 +38,11 @@ const page = () => {
       text: "Create your first event and start exploring with your friends!",
     },
   ];
+
   return (
     <View>
       <div className="text-center h-full flex flex-col">
-        <div className="flex-1/4 flex justify-center place-items-center">
+        <div className="flex size-70 m-auto justify-center place-items-center">
           {welcomeScreenData[page].image ? (
             <Image
               src={welcomeScreenData[page].image}
@@ -49,12 +50,12 @@ const page = () => {
               height={0}
               sizes="100vh"
               alt={welcomeScreenData[page].image}
-              className="w-80"
+              className="w-full"
             />
           ) : (
             <Link
               href={"/events/create"}
-              className="flex place-items-center justify-center bg-accent-200 rounded-full size-40 p-4 text-xl"
+              className="flex place-items-center justify-center bg-accent-200 rounded-full size-40 p-4 text-xl text-black font-semibold"
             >
               Create event
             </Link>
@@ -73,7 +74,7 @@ const page = () => {
             <button
               disabled={page === 0}
               onClick={() => setPage((prev) => prev - 1)}
-              className="bg-accent-200 rounded-full p-2"
+              className="bg-accent-200 rounded-full text-text-primary p-2 cursor-pointer"
             >
               <FaAngleDoubleLeft size={"1.5rem"} />
             </button>
@@ -82,7 +83,7 @@ const page = () => {
                 <button
                   key={idx}
                   onClick={() => setPage(idx)}
-                  className={` size-4 block rounded-full ${
+                  className={` size-4 block rounded-full cursor-pointer ${
                     page === idx ? "bg-accent-200" : "bg-neutral-200"
                   } transition-colors duration-200 ease-in-out`}
                 />
@@ -91,7 +92,7 @@ const page = () => {
             <button
               disabled={page === welcomeScreenData.length - 1}
               onClick={() => setPage((prev) => prev + 1)}
-              className="bg-accent-200 rounded-full p-2"
+              className="bg-accent-200 text-text-primary rounded-full p-2 cursor-pointer"
             >
               <FaAngleDoubleRight size={"1.5rem"} />
             </button>

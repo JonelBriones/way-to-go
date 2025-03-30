@@ -1,8 +1,8 @@
 import React from "react";
-import Events from "../../features/event/Events";
+import Map from "../../features/map/Map";
 import { mockEvents } from "../../data/events";
 const page = () => {
-  return <Events events={mockEvents} />;
+  return <Map events={mockEvents} />;
 };
 
 export default page;

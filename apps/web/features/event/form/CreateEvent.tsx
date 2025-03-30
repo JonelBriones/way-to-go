@@ -2,14 +2,17 @@
 import React, { useState } from "react";
 import Navbar from "../../../components/navbar/Navbar";
 import View from "../../../components/View";
-
+const defaultEventForm = {
+  name: "",
+  invited: [],
+  hosted: "Jonel",
+};
 const CreateEvent = () => {
   const [event, setEvent] = useState("");
   const error = "";
 
   return (
     <View>
-      {" "}
       <form action="" className="flex flex-col gap-4 text-left">
         <div className="flex flex-col gap-4 font-semibold">
           <label htmlFor="" className="text-sm">

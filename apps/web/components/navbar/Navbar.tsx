@@ -1,23 +1,25 @@
 import Link from "next/link";
 import React from "react";
-import { IoMdHome, IoIosCreate } from "react-icons/io";
-import { BiSolidMessageSquareDetail } from "react-icons/bi";
-import { IoPersonSharp } from "react-icons/io5";
-import { HiLocationMarker } from "react-icons/hi";
+import { IoIosCreate } from "react-icons/io";
+import { GoHome } from "react-icons/go";
+import { VscAccount } from "react-icons/vsc";
+import { LuMessageSquareMore } from "react-icons/lu";
+import { IoLocationOutline } from "react-icons/io5";
 
 const Navbar = () => {
+  const id = "Knock2";
   const links = [
     {
       text: "events",
       url: "/events",
     },
     {
-      text: "landmark",
-      url: "/events/landmarks",
-    },
-    {
       text: "create",
       url: "/events/create",
+    },
+    {
+      text: "map",
+      url: `/map`,
     },
     {
       text: "notifications",
@@ -29,20 +31,21 @@ const Navbar = () => {
     },
   ];
   const icons = [
-    <IoMdHome size={"1.75rem"} />,
-    <HiLocationMarker size={"1.75rem"} />,
+    <GoHome size={"1.75rem"} />,
     <IoIosCreate size={"1.75rem"} />,
-    <BiSolidMessageSquareDetail size={"1.75rem"} />,
-    <IoPersonSharp size={"1.75rem"} />,
+    <IoLocationOutline size={"1.75rem"} />,
+    <LuMessageSquareMore size={"1.75rem"} />,
+    <VscAccount size={"1.75rem"} />,
   ];
+  // Home, Friends, Maps, Account
   return (
     <div>
-      <div className="flex justify-evenly border">
+      <div className="flex justify-evenly">
         {links.map((link, idx) => (
           <Link
             key={link.text}
             href={link.url}
-            className="p-4 border w-full flex justify-center"
+            className="p-4 w-full flex justify-center text-text-primary"
           >
             {/* {link.text} */}
             {icons[idx]}

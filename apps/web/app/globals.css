@@ -1,68 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* Primary - Spotify Green */
-  --color-primary-50: #e6f5e9;
-  --color-primary-100: #b8e6c2;
-  --color-primary-200: #8ad89b;
-  --color-primary-300: #5cc974;
-  --color-primary-400: #2ebd59;
-  --color-primary-500: #1db954;
-  --color-primary-600: #1aa34a;
-  --color-primary-700: #179c3e;
-  --color-primary-800: #148434;
-  --color-primary-900: #116d2c;
+  /* Primary Color */
+  --color-primary-50: #fdf1e4;
+  --color-primary-100: #faded1;
+  --color-primary-200: #f7c5a3;
+  --color-primary-300: #f4b075;
+  --color-primary-400: #f4a261;
+  --color-primary-500: #f4a261;
+  --color-primary-600: #dc8d55;
+  --color-primary-700: #c47b49;
+  --color-primary-800: #ac693d;
+  --color-primary-900: #945731;
 
-  /* Secondary - Dark Background */
-  --color-secondary-50: #2a2a2a;
-  --color-secondary-100: #252525;
-  --color-secondary-200: #121212;
-  --color-secondary-300: #181818;
-  --color-secondary-400: #1e1e1e;
-  --color-secondary-500: #191919;
-  --color-secondary-600: #0f0f0f;
-  --color-secondary-700: #000000;
-  --color-secondary-800: #070707;
-  --color-secondary-900: #030303;
+  /* Secondary Color */
+  --color-secondary-50: #f9e5f7;
+  --color-secondary-100: #f4c2ef;
+  --color-secondary-200: #ee9be4;
+  --color-secondary-300: #e938da;
+  --color-secondary-400: #d633c7;
+  --color-secondary-500: #e938da;
+  --color-secondary-600: #c931bd;
+  --color-secondary-700: #ab2ba1;
+  --color-secondary-800: #8e2584;
+  --color-secondary-900: #711f68;
 
-  /* Accent - Bright Green */
-  --color-accent-50: #1ed760;
-  --color-accent-100: #1cd35a;
-  --color-accent-200: #1ac054;
-  --color-accent-300: #18ad4e;
-  --color-accent-400: #169948;
-  --color-accent-500: #148442;
-  --color-accent-600: #12713c;
-  --color-accent-700: #105e36;
-  --color-accent-800: #0e4c2f;
-  --color-accent-900: #0c3a29;
+  /* Accent Color */
+  --color-accent-50: #e5f8fd;
+  --color-accent-100: #b8eef9;
+  --color-accent-200: #8ae4f4;
+  --color-accent-300: #5bdaef;
+  --color-accent-400: #39d5f4;
+  --color-accent-500: #39d5f4;
+  --color-accent-600: #31bfdd;
+  --color-accent-700: #2aa9c6;
+  --color-accent-800: #2293af;
+  --color-accent-900: #1a7d98;
 
   /* Neutral Colors */
-  --color-neutral-50: #b3b3b3;
-  --color-neutral-100: #a0a0a0;
-  --color-neutral-200: #8c8c8c;
-  --color-neutral-300: #808080;
-  --color-neutral-400: #737373;
-  --color-neutral-500: #676767;
-  --color-neutral-600: #5a5a5a;
-  --color-neutral-700: #4d4d4d;
-  --color-neutral-800: #404040;
-  --color-neutral-900: #333333;
+  --color-neutral-50: #f5f5f5;
+  --color-neutral-100: #e9e9e9;
+  --color-neutral-200: #d9d9d9;
+  --color-neutral-300: #c4c4c4;
+  --color-neutral-400: #9e9e9e;
+  --color-neutral-500: #757575;
+  --color-neutral-600: #616161;
+  --color-neutral-700: #424242;
+  --color-neutral-800: #274854;
+  --color-neutral-900: #1a1a1a;
 
   /* Text Colors */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #b3b3b3;
-  --color-text-muted: #808080;
+  --color-text-primary: #274854;
+  --color-text-secondary: #4f6d76;
+  --color-text-muted: #6a8a97;
 
   /* Background Colors */
-  --color-background-light: #121212;
-  --color-background-dark: #000000;
+  --color-background-light: #fbfbfe;
+  --color-background-dark: #f0f0f4;
 
   /* Semantic Colors */
-  --color-success-500: #1db954;
-  --color-warning-500: #ffc857;
-  --color-error-500: #ff5050;
-  --color-info-500: #1ed760;
+  --color-success-500: #48bb78;
+  --color-warning-500: #ecc94b;
+  --color-error-500: #f56565;
+  --color-info-500: #4299e1;
 }
 
 body {
@@ -70,6 +70,35 @@ body {
   color: var(--color-text-primary);
   font-family: Arial, Helvetica, sans-serif;
 }
+#map-container {
+  height: 100%;
+  /* temporarily set the background color so we can tell where the map container is positioned */
+  background-color: lightgrey;
+}
+.marker {
+  background-image: url("https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 
+// text #274854
+// background #fbfbfe
+// primary #f4a261
+// secondary #e938da
+// accent #39d5f4
+60 - neutral
+30 - secondary 
+10 - accent
+
+##F4AB48 orange primary
+##6C13DB purple seconday
+#F4AB48 blue accent
+
+*/
 
 /* 
 Ocean Blue Theme
